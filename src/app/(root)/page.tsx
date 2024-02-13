@@ -1,10 +1,10 @@
-import Page from "@/components/Page";
+import MainPage from "@/components/Page/main/page";
 import TrendingProducts from "./_components/TrendingProducts";
 
 export default function HomePage() {
   return (
-    <Page>
+    <MainPage>
       <TrendingProducts />
-    </Page>
+    </MainPage>
   );
 }

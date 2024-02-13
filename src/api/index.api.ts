@@ -1,4 +1,6 @@
 import axios from "axios";
+import AuthAPI from "./auth/auth.api";
+import BrandsAPI from "./brands/brands.api";
 import ProductsAPI from "./products/products.api";
 
 const coreClient = axios.create({
@@ -7,6 +9,8 @@ const coreClient = axios.create({
 
 class API {
   static products = new ProductsAPI(coreClient);
+  static brands = new BrandsAPI(coreClient);
+  static auth = new AuthAPI(coreClient);
 }
 
 export default API;

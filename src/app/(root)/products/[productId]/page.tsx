@@ -1,5 +1,5 @@
 import API from "@/api/index.api";
-import Page from "@/components/Page";
+import Page from "@/components/Page/main";
 import { Product } from "@/types/Product.type";
 import Image from "next/image";
 import Link from "next/link";
