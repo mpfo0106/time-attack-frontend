@@ -1,3 +1,4 @@
+import { Brand } from "@/types/Brands.type";
 import { AxiosInstance } from "axios";
 
 class BrandsAPI {
@@ -14,11 +15,11 @@ class BrandsAPI {
 
     const data = response.data["result"];
 
-    return data;
+    return data as Brand[];
   }
 
   async getBrand(brandId: number) {
-    const url = `/products/${brandId}`;
+    const url = `/products?${brandId.toString()}`;
     const response = await this.coreClient.get(url);
     const data = response.data["result"];
 

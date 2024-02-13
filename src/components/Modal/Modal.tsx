@@ -9,7 +9,6 @@ interface ModalProps {
 }
 
 function Modal({ title, children }: PropsWithChildren<ModalProps>) {
-  console.log(111);
   const dispatch = useAppDispatch();
 
   const handleClickBackdrop = () => {
@@ -19,14 +18,14 @@ function Modal({ title, children }: PropsWithChildren<ModalProps>) {
 
   return (
     <div
-      className="fixed top-0 left-0 bg-black/50 w-screen h-screen z-30"
+      className="bg-black/50 flex items-center justify-center fixed top-0 left-0 right-0 bottom-0 z-20"
       onClick={handleClickBackdrop}
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-white w-full max-w-screen-sm mx-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-8 py-12 shadow-2xl drop-shadow-2xl rounded-lg"
+        className="bg-white rounded-md w-full max-w-[400px] px-5 py-8"
       >
-        <h2 className="text-2xl font-bold mb-8">{title}</h2>
+        <h2 className="font-bold text-3xl text-center my-12">{title}</h2>
         {children}
       </div>
     </div>

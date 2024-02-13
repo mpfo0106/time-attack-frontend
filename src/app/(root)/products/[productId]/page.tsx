@@ -58,9 +58,6 @@ async function ProductPage({
           </button>
         </div>
       </section>
-      {/* <h2>{product}</h2> */}
-
-      {/* <AddToCartButton product={product} /> */}
     </Page>
   );
 }
