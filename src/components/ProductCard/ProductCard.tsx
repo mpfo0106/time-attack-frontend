@@ -1,23 +1,9 @@
+import { Product } from "@/types/Product.type";
 import Image from "next/image";
 import Link from "next/link";
 
 interface ProductCardProps {
-  // product: Product;
-  product: {
-    id: number;
-    name: string;
-    imgSrc: string;
-    onlineStock: number;
-    price: number;
-    originalPrice: number;
-    deliveryType: string;
-    brandId: number;
-    brand: {
-      id: number;
-      nameKr: string;
-      nameEn: string;
-    };
-  };
+  product: Product;
 }
 
 function ProductCard({ product }: ProductCardProps) {
@@ -41,9 +27,11 @@ function ProductCard({ product }: ProductCardProps) {
         <h6 className="text-[15px]">{product.name}</h6>
         <div className="text-sm flex items-baseline gap-x-1.5">
           <span className="text-red-500 line-through font-semibold">
-            {product.originalPrice}
+            {product.originalPrice.toLocaleString("ko-KR")}
           </span>
-          <span className="font-bold">{product.price}</span>
+          <span className="font-bold">
+            {product.price.toLocaleString("ko-KR")}
+          </span>
         </div>
       </div>
     </Link>
