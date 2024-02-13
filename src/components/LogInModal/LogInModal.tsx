@@ -22,7 +22,7 @@ function LogInModal() {
     const action = setModal(null);
     dispatch(action);
   };
-
+  //TODO 새로고침해도 로그인 안풀리게 cookie 설정하기
   return (
     <Modal title="로그인">
       <section className="flex flex-col items-center gap-y-4 max-w-sm mx-auto w-full">
