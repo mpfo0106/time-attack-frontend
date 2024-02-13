@@ -1,3 +1,10 @@
+import Page from "@/components/Page";
+import TrendingProducts from "./_components/TrendingProducts";
+
 export default function HomePage() {
-  return <main>홈페이지</main>;
+  return (
+    <Page>
+      <TrendingProducts />
+    </Page>
+  );
 }

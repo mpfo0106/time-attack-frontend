@@ -9,8 +9,10 @@ class ProductsAPI {
 
   async getProducts() {
     const url = "/products";
+
     const response = await this.coreClient.get(url);
-    const data = response.data;
+
+    const data = response.data["result"];
 
     return data;
   }
@@ -18,7 +20,7 @@ class ProductsAPI {
   async getProduct(productId: number) {
     const url = `/products/${productId}`;
     const response = await this.coreClient.get(url);
-    const data = response.data;
+    const data = response.data["result"];
 
     return data;
   }
