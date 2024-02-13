@@ -24,7 +24,10 @@ function SignUpPage() {
     if (pwValue !== pw2Value)
       return alert("비밀번호와 비밀번호 확인이 일치하지 않아요");
 
-    const { accessToken } = await mutateAsync({ id: idValue, pw: pwValue });
+    const { accessToken } = await mutateAsync({
+      email: idValue,
+      password: pwValue,
+    });
     logIn(accessToken);
   };
 

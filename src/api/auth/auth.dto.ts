@@ -1,8 +1,8 @@
 export type LogInDto = {
-  id: string;
-  pw: string;
+  email: string;
+  password: string;
 };
 export type SignUpDto = {
-  id: string;
-  pw: string;
+  email: string;
+  password: string;
 };

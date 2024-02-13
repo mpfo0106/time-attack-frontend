@@ -16,7 +16,7 @@ function LogInModal() {
   const { logIn } = useAuth();
 
   const handleClickLogIn = async () => {
-    const { accessToken } = await mutateAsync({ id, pw });
+    const { accessToken } = await mutateAsync({ email: id, password: pw });
     logIn(accessToken);
 
     const action = setModal(null);
