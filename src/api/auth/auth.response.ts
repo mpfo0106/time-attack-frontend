@@ -5,3 +5,6 @@ export type LogInData = {
 export type SignUpData = {
   accessToken: string;
 };
+export type IsRefreshData = {
+  accessToken: string;
+};
